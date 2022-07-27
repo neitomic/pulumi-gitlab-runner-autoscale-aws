@@ -1,4 +1,4 @@
-module github.com/pulumi/pulumi-xyz
+module github.com/pulumi/pulumi-gitlab-runner-awsa
 
 go 1.17
 

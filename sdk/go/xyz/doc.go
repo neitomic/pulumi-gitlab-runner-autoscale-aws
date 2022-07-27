@@ -1,3 +1,3 @@
-// Package xyz exports types, functions, subpackages for provisioning xyz resources.
+// Package gitlab-runner-awsa exports types, functions, subpackages for provisioning gitlab-runner-awsa resources.
 //
-package xyz
+package gitlab-runner-awsa

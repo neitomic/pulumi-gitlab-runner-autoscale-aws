@@ -1,5 +1,5 @@
 {
-    "name": "@pulumi/xyz",
+    "name": "@pulumi/gitlab-runner-awsa",
     "version": "${VERSION}",
     "scripts": {
         "build": "tsc"

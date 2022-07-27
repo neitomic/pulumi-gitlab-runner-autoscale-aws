@@ -1,6 +1,6 @@
-import * as xyz from "@pulumi/xyz";
+import * as gitlab-runner-awsa from "@pulumi/gitlab-runner-awsa";
 
-const page = new xyz.StaticPage("page", {
+const page = new gitlab-runner-awsa.StaticPage("page", {
     indexContent: "<html><body><p>Hello world!</p></body></html>",
 });
 

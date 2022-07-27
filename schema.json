@@ -1,7 +1,7 @@
 {
-    "name": "xyz",
+    "name": "gitlab-runner-awsa",
     "resources": {
-        "xyz:index:StaticPage": {
+        "gitlab-runner-awsa:index:StaticPage": {
             "isComponent": true,
             "inputProperties": {
                 "indexContent": {
@@ -38,7 +38,7 @@
         },
         "go": {
             "generateResourceContainerTypes": true,
-            "importBasePath": "github.com/pulumi/pulumi-xyz/sdk/go/xyz",
+            "importBasePath": "github.com/pulumi/pulumi-gitlab-runner-awsa/sdk/go/gitlab-runner-awsa",
             "respectSchemaVersion": true
         },
         "nodejs": {

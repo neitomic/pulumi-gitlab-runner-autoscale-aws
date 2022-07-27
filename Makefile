@@ -1,6 +1,6 @@
 VERSION         := 0.0.1
 
-PACK            := xyz
+PACK            := gitlab-runner-awsa
 PROJECT         := github.com/pulumi/pulumi-${PACK}
 
 PROVIDER        := pulumi-resource-${PACK}
