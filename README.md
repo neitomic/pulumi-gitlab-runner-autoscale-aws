@@ -55,7 +55,7 @@ const runner = new gitlabRunnerAwsa.GitlabRunnerAwsa("test-runner-awsa", {
 ```
 
 ## TODOs
-
+- [ ] CI/CD & release
 - [ ] Support more outputs
 - [ ] Support S3 cache
 - [ ] Support more machine options (instance profile, userdata,...)
