@@ -1,6 +1,6 @@
 import * as gitlabRunnerAwsa  from "@pulumi/gitlab-runner-awsa";
 
-const page = new gitlabRunnerAwsa.GitlabRunnerAwsa("test-runner-awsa", {
+const runner = new gitlabRunnerAwsa.GitlabRunnerAwsa("test-runner-awsa", {
     gitlabUrl: "https://gitlab.com",
     gitlabRunnerToken: "",
     machineIdleNodes: 0,
@@ -11,4 +11,4 @@ const page = new gitlabRunnerAwsa.GitlabRunnerAwsa("test-runner-awsa", {
     subnetId: "subnet-xxxxxxx"
 });
 
-export const gitlabRunnerUserData = page.gitlabRunnerUserData;
+export const gitlabRunnerUserData = runner.gitlabRunnerUserData;

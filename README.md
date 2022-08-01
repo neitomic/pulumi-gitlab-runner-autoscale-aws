@@ -38,3 +38,30 @@ $ pulumi up
 ## Usage
 
 See [example](examples/simple)
+
+```typescript
+import * as gitlabRunnerAwsa  from "@pulumi/gitlab-runner-awsa";
+
+const runner = new gitlabRunnerAwsa.GitlabRunnerAwsa("test-runner-awsa", {
+    gitlabUrl: "https://gitlab.com",
+    gitlabRunnerToken: "",
+    machineIdleNodes: 0,
+    machineIdleTimeSecond: 1800,
+    machineInstanceType: "t3.2xlarge",
+    machineMaxBuilds: 20,
+    runnerMaxConcurrentBuild: 10,
+    subnetId: "subnet-xxxxxxx"
+});
+```
+
+## TODOs
+
+- [ ] Support more outputs
+- [ ] Support S3 cache
+- [ ] Support more machine options (instance profile, userdata,...)
+- [ ] Support machine private/public IP addresses (enable/disable)
+- [ ] Support machine spot instance 
+- [ ] Support auto-scaling config
+- [ ] Support Docker auth
+- [ ] Support Docker Registry Proxy with rpardini/docker-registry-proxy
+- [ ] Workaround private network environment (no Internet access)
