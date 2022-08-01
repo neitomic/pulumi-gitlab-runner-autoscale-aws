@@ -1,5 +1,5 @@
 {
-    "version": "${VERSION}",
+    "version": "0.0.1",
     "bin": "bin/index.js",
     "dependencies": {
         "@pulumi/pulumi": "^3.34.1",

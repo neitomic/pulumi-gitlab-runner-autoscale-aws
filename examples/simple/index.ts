@@ -1,8 +1,14 @@
-import * as gitlab-runner-awsa from "@pulumi/gitlab-runner-awsa";
+import * as gitlabRunnerAwsa  from "@pulumi/gitlab-runner-awsa";
 
-const page = new gitlab-runner-awsa.StaticPage("page", {
-    indexContent: "<html><body><p>Hello world!</p></body></html>",
+const page = new gitlabRunnerAwsa.GitlabRunnerAwsa("test-runner-awsa", {
+    gitlabUrl: "https://gitlab.com",
+    gitlabRunnerToken: "",
+    machineIdleNodes: 0,
+    machineIdleTimeSecond: 1800,
+    machineInstanceType: "t3.2xlarge",
+    machineMaxBuilds: 20,
+    runnerMaxConcurrentBuild: 10,
+    subnetId: "subnet-xxxxxxx"
 });
 
-export const bucket = page.bucket;
-export const url = page.websiteUrl;
+export const gitlabRunnerUserData = page.gitlabRunnerUserData;

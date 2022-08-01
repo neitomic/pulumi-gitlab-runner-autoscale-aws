@@ -5,18 +5,25 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 // Export members:
+export * from "./gitlabRunnerAwsa";
 export * from "./provider";
-export * from "./staticPage";
+
+// Export sub-modules:
+import * as types from "./types";
+
+export {
+    types,
+};
 
 // Import resources to register:
-import { StaticPage } from "./staticPage";
+import { GitlabRunnerAwsa } from "./gitlabRunnerAwsa";
 
 const _module = {
     version: utilities.getVersion(),
     construct: (name: string, type: string, urn: string): pulumi.Resource => {
         switch (type) {
-            case "gitlab-runner-awsa:index:StaticPage":
-                return new StaticPage(name, <any>undefined, { urn })
+            case "gitlab-runner-awsa:index:GitlabRunnerAwsa":
+                return new GitlabRunnerAwsa(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
